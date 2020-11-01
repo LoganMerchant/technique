@@ -5,7 +5,7 @@ const path = require('path');
 const session = require('express-session');
 
 // Import files
-// const routes = require('./controllers');
+const routes = require('./controllers');
 const sequelize = require('./config/connection');
 
 // Set up a session
@@ -39,7 +39,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(session(sess));
 
 // Turn on the routes
-// app.use(routes);
+app.use(routes);
 
 // Turn on the connect to the db and server
 sequelize.sync({ force: false }).then(() => {
