@@ -12,7 +12,7 @@ const helpers = require('./utils/helpers');
 // Set up a session
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const sess = {
-    secret: process.env.SESSION_SECRET,
+    secret: 'supersecretthing',
     cookie: {
         maxAge: 600000
 
