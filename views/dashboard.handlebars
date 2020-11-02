@@ -1,0 +1,15 @@
+<ol>
+    {{#each posts}}
+    <div class="card w-50 mx-auto my-2">
+        <div class="card-body">
+            <h2 class="card-title">{{title}}</h2>
+            <p class="card-subtitle text-secondary">Posted on {{format_date created_at}}</p>
+        </div>
+    <a href="/dashboard/edit/{{id}}" type="button" class="w-25 mx-auto btn btn-secondary mb-2">Edit Post</a>
+    </div>
+    {{/each}}
+</ol>
+
+<div class="d-flex justify-content-center">
+    <a href="/dashboard/add-post" type="button" class="w-25 mx-auto btn btn-warning mb-2">Add a post</a>
+</div>
