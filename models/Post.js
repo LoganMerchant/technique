@@ -22,7 +22,7 @@ Post.init(
             }
         },
         post_content: {
-            type: DataTypes.STRING, 
+            type: DataTypes.STRING(2000), 
             allowNull: false
         },
         user_id: {
